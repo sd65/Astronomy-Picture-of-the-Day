@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.doignon.sylvain.apodnasa.MainActivity">
+    <item
+        android:title="Redo tutorial"
+        android:id="@+id/redotuto" />
+    <item
+        android:id="@+id/about"
+        android:orderInCategory="100"
+        android:title="@string/about"
+        app:showAsAction="never" />
+    <item
+        android:title="Share this app"
+        android:id="@+id/share" />
+</menu>

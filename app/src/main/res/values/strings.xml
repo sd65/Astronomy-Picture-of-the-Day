@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Astronomy Picture of the Day</string>
+
+    <string name="about">About</string>
+    <string name="about_string">Made with love for educational purposes.</string>
+    <string name="play_store_link">https://play.google.com/store/apps/details?id=com.doignon.sylvain.apodnasa</string>
+    <string name="tutorial">"Here's how to navigate :\n• Swipe to change the day\n• Long press to get basic picture info\n• Double tap to get full picture details\n• Tap to quit"</string>
+
+    <string name="website">https://apod.nasa.gov/apod/astropix.html</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="menu_title_1">Today</string>
+    <string name="menu_title_2">Yesterday</string>
+    <string name="menu_title_3">Other</string>
+    <string name="nasa_api_key">AwIruMd9nIwWjco8UMTUNmlJbYYMzOZuRhiHfJvG</string>
+    <string name="nasa_api_url">https://api.nasa.gov/planetary/apod</string>
+    <string name="default_image">https://apod.nasa.gov/apod/image/1611/HeartSoul_Lindemann_960.jpg</string>
+
+
+    <string name="title_activity_maximize_image"></string>
+</resources>

@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.doignon.sylvain.apodnasa.MainActivity$PlaceholderFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="false"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollview"
+        android:scrollbars="none"
+        android:clipToPadding="false"
+        android:isScrollContainer="false"
+        android:measureAllChildren="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:id="@+id/image"
+                android:layout_height="300dp"
+                android:paddingTop="15dp"
+                android:clickable="true"
+                app:srcCompat="@drawable/wait"
+                android:background="@android:color/black" />
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:textSize="36sp"
+                    android:textColor="@android:color/black"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="5dp" />
+
+                <TextView
+                    android:text="Please wait..."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/description"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="2sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
