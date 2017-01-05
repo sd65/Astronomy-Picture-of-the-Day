@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -137,11 +138,29 @@ class MyAsyncTask extends AsyncTask<Object, String, JSONObject> {
                 this.cancel(true);
             }
 
+            Picasso.Builder builder = new Picasso.Builder(context);
+            builder.listener(new Picasso.Listener()
+            {
+                @Override
+                public void onImageLoadFailed(Picasso picasso, Uri uri, Exception exception)
+                {
+                    String error = "Error when downloading image !\n";
+                    error += exception.getClass().getSimpleName() + "\n";
+                    error += exception.getMessage();
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast.makeText(context, error, duration).show();
+                }
+            });
+            Picasso p = builder.build();
+
+            // Dirty Fix...
+            jurl = jurl.replace("http://", "https://");
+
             if (forMaximize)
-                Picasso.with(context).load(jurl).resize(4096, 4096).onlyScaleDown().centerInside()
+                p.load(jurl).resize(4096, 4096).onlyScaleDown().centerInside()
                         .placeholder(R.drawable.wait).error(R.drawable.error).into(image);
             else
-                Picasso.with(context).load(jurl).fit().centerCrop().placeholder(R.drawable.wait)
+                p.load(jurl).fit().centerCrop().placeholder(R.drawable.wait)
                         .error(R.drawable.error).into(image);
 
             ImageInfo i = new ImageInfo(jtitle, jurl, date, jsdate);

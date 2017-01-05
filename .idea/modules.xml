@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Apodnasa.iml" filepath="$PROJECT_DIR$/Apodnasa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Astronomy-Picture-of-the-Day.iml" filepath="$PROJECT_DIR$/Astronomy-Picture-of-the-Day.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
